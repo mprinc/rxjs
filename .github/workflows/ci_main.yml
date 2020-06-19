@@ -33,4 +33,7 @@ jobs:
         npm run test:side-effects
     - name: dtslint
       run: npm run dtslint
+    - name: import
+      if: ${{ matrix.node == '13' }}
+      run: npm run test:import
 
